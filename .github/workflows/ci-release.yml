@@ -17,3 +17,7 @@ jobs:
       with:
         file: '*.tar.gz'
         file_glob: true
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "This is my release text"
